@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Proyecto Final</title>
+  <link href="style/css.pst.css" rel="stylesheet"  type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif&v2" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+  <script src="javascript/instafeed.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var feed = new Instafeed({
+      sortBy: "most-liked",
+      limit: "15",
+      clientId: "532ea37d10054f8c974c717fccf190bd"
+    });
+    feed.run();
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <h1>Instagram Search</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Search</a></li>
+        <li><a href="primera.html">Most Liked Images</a></li>
+        <li><a href="segunda.html">Software Related Images</a></li>
+        <li><a href="tercera.html">Show Popular Images</a></li>
+      </ul>
+    </nav>
+
+    <div id="insta-wrap">
+
+      <div id="instafeed"></div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
