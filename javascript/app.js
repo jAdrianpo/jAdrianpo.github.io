@@ -30,31 +30,8 @@ $(document).ready(function() {
 	    });
 	}
 
-	function loadPopularPhotos() {
-	$.ajax({
-      type: "GET",
-      dataType: "jsonp",
-      cache: false,
-      url: "https://api.instagram.com/v1/media/popular?client_id=" + instagram.clientID + "&count=15",
-			data: {"client_id": instagram.clientID, "max_tag_id": min},
-      success: function(pic) {
-				min = pic.pagination.next_max_tag_id;
-				url = pic.pagination.next_url;
-				for (var i = 0; i < pic.data.length; i++) {
-					link = pic.data[i].link;
-					urlsrc = pic.data[i].images.thumbnail.url;
-					$("#output").append("<div id='outputpic'><a target='_blank' href='" + link + "'><div id='stardiv'><div id='likesdiv'></div></div><img src='" + urlsrc + "'></img></div>");
-        }
-      }
-    });
-	}
-
 	$("#morepictures").on("click", function() {
 		loadInstagramPhotos();
-	});
-
-	$("#populares").on("click", function() {
-		loadPopularPhotos();
 	});
 
 	$("#clearpictures").on("click", function() {

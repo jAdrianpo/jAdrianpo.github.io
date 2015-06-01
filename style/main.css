@@ -9,6 +9,8 @@
 	height: 370px;
 	width: 100%;
 	margin-bottom: 60px;
+
+
 }
 
 #top_section h1 {
@@ -61,7 +63,7 @@ input {
 **************************************/
 
 button {
-position: relative;
+align-items: center;
 display: inline;
 text-align: center;
 height: 35px;
@@ -78,7 +80,11 @@ font-size: 14px;
 }
 
 #buttons {
-	padding-left: 36%;
+	padding-left: 18%;
+}
+
+a {
+	text-decoration: none;
 }
 
 /*************************************
